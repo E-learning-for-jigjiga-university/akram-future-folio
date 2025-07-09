@@ -103,9 +103,11 @@ All colors MUST be HSL.
     height: 100%;
     z-index: -2;
     background: 
-      radial-gradient(ellipse at top, hsl(260, 100%, 8%) 0%, transparent 50%),
-      radial-gradient(ellipse at bottom, hsl(195, 100%, 8%) 0%, transparent 50%),
-      radial-gradient(ellipse at center, hsl(240, 10%, 3.9%) 0%, hsl(240, 10%, 1%) 100%);
+      radial-gradient(ellipse at top, hsl(260, 100%, 20%, 0.3) 0%, transparent 50%),
+      radial-gradient(ellipse at bottom, hsl(195, 100%, 25%, 0.4) 0%, transparent 50%),
+      radial-gradient(ellipse at center, hsl(180, 100%, 15%, 0.2) 0%, transparent 70%),
+      radial-gradient(circle at 25% 25%, hsl(260, 100%, 30%, 0.2) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, hsl(195, 100%, 30%, 0.3) 0%, transparent 50%);
   }
 
   /* Animated stars */
@@ -118,14 +120,17 @@ All colors MUST be HSL.
     height: 100%;
     z-index: -1;
     background-image: 
-      radial-gradient(2px 2px at 20px 30px, hsl(180, 100%, 90%), transparent),
-      radial-gradient(2px 2px at 40px 70px, hsl(195, 100%, 80%), transparent),
-      radial-gradient(1px 1px at 90px 40px, hsl(260, 100%, 90%), transparent),
-      radial-gradient(1px 1px at 130px 80px, hsl(180, 100%, 80%), transparent),
-      radial-gradient(2px 2px at 160px 30px, hsl(195, 100%, 90%), transparent);
+      radial-gradient(2px 2px at 20px 30px, hsl(180, 100%, 90%, 0.8), transparent),
+      radial-gradient(2px 2px at 40px 70px, hsl(195, 100%, 80%, 0.6), transparent),
+      radial-gradient(1px 1px at 90px 40px, hsl(260, 100%, 90%, 0.7), transparent),
+      radial-gradient(1px 1px at 130px 80px, hsl(180, 100%, 80%, 0.5), transparent),
+      radial-gradient(2px 2px at 160px 30px, hsl(195, 100%, 90%, 0.8), transparent),
+      radial-gradient(1px 1px at 200px 50px, hsl(260, 100%, 85%, 0.6), transparent),
+      radial-gradient(2px 2px at 240px 90px, hsl(180, 100%, 95%, 0.7), transparent);
     background-repeat: repeat;
-    background-size: 200px 100px;
-    animation: sparkle 20s linear infinite;
+    background-size: 300px 200px;
+    animation: sparkle 25s linear infinite;
+    opacity: 0.8;
   }
 
   @keyframes sparkle {
