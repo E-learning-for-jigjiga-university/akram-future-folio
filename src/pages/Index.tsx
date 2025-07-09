@@ -122,7 +122,7 @@ const Index = () => {
           </div>
 
           <div className="flex justify-center space-x-6 pt-8">
-            <a href="#" className="text-3xl text-primary hover:text-accent transition-colors hover:scale-110 transform duration-300">
+            <a href="https://github.com/akramtata" className="text-3xl text-primary hover:text-accent transition-colors hover:scale-110 transform duration-300">
               <FaGithub />
             </a>
             <a href="#" className="text-3xl text-primary hover:text-accent transition-colors hover:scale-110 transform duration-300">
