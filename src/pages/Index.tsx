@@ -1,13 +1,46 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { FaGithub, FaLinkedin, FaReddit, FaEnvelope, FaExternalLinkAlt } from "react-icons/fa";
+import { 
+  FaGithub, 
+  FaLinkedin, 
+  FaReddit, 
+  FaEnvelope, 
+  FaExternalLinkAlt,
+  FaHtml5,
+  FaCss3Alt,
+  FaJs,
+  FaReact,
+  FaNodeJs,
+  FaGitAlt,
+  FaDocker,
+  FaAws
+} from "react-icons/fa";
+import { 
+  SiTypescript,
+  SiExpress,
+  SiMongodb,
+  SiPostgresql,
+  SiNextdotjs,
+  SiTailwindcss
+} from "react-icons/si";
 
 const Index = () => {
   const techStack = [
-    "HTML", "CSS", "JavaScript", "TypeScript", "React.js", 
-    "Node.js", "Express", "MongoDB", "PostgreSQL", "Next.js",
-    "Tailwind CSS", "Git", "Docker", "AWS"
+    { name: "HTML", icon: FaHtml5, color: "text-orange-500" },
+    { name: "CSS", icon: FaCss3Alt, color: "text-blue-500" },
+    { name: "JavaScript", icon: FaJs, color: "text-yellow-500" },
+    { name: "TypeScript", icon: SiTypescript, color: "text-blue-600" },
+    { name: "React.js", icon: FaReact, color: "text-cyan-400" },
+    { name: "Node.js", icon: FaNodeJs, color: "text-green-500" },
+    { name: "Express", icon: SiExpress, color: "text-gray-300" },
+    { name: "MongoDB", icon: SiMongodb, color: "text-green-600" },
+    { name: "PostgreSQL", icon: SiPostgresql, color: "text-blue-400" },
+    { name: "Next.js", icon: SiNextdotjs, color: "text-white" },
+    { name: "Tailwind CSS", icon: SiTailwindcss, color: "text-cyan-500" },
+    { name: "Git", icon: FaGitAlt, color: "text-orange-600" },
+    { name: "Docker", icon: FaDocker, color: "text-blue-500" },
+    { name: "AWS", icon: FaAws, color: "text-orange-400" }
   ];
 
   const projects = [
@@ -110,18 +143,22 @@ const Index = () => {
           </div>
           
           <div className="flex flex-wrap gap-4 justify-center animate-fade-in">
-            {techStack.map((tech, index) => (
-              <Badge 
-                key={tech} 
-                variant="secondary" 
-                className="text-lg py-2 px-4 bg-gradient-primary text-primary-foreground border-primary/30 hover:scale-105 transition-transform duration-300 shadow-glow-secondary"
-                style={{
-                  animationDelay: `${index * 0.1}s`
-                }}
-              >
-                {tech}
-              </Badge>
-            ))}
+            {techStack.map((tech, index) => {
+              const IconComponent = tech.icon;
+              return (
+                <Badge 
+                  key={tech.name} 
+                  variant="secondary" 
+                  className="text-lg py-3 px-6 bg-gradient-primary text-primary-foreground border-primary/30 hover:scale-110 transition-all duration-300 shadow-glow-secondary hover:shadow-glow-accent animate-tech-float"
+                  style={{
+                    animationDelay: `${index * 0.1}s`
+                  }}
+                >
+                  <IconComponent className={`mr-2 text-xl ${tech.color}`} />
+                  {tech.name}
+                </Badge>
+              );
+            })}
           </div>
         </div>
       </section>
