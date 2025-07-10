@@ -24,6 +24,7 @@ import {
   SiNextdotjs,
   SiTailwindcss
 } from "react-icons/si";
+import tata from '../../img/tata.jpg';
 
 const Index = () => {
   const techStack = [
@@ -36,7 +37,7 @@ const Index = () => {
     { name: "Express", icon: SiExpress, color: "text-gray-300", level: "Advanced" },
     { name: "MongoDB", icon: SiMongodb, color: "text-green-600", level: "Intermediate" },
     { name: "PostgreSQL", icon: SiPostgresql, color: "text-blue-400", level: "Intermediate" },
-    { name: "Next.js", icon: SiNextdotjs, color: "text-white", level: "Advanced" },
+    { name: "Next.js", icon: SiNextdotjs, color: "text-white", level: "Begginer" },
     { name: "Tailwind CSS", icon: SiTailwindcss, color: "text-cyan-500", level: "Expert" },
     { name: "Git", icon: FaGitAlt, color: "text-orange-600", level: "Advanced" },
     { name: "Docker", icon: FaDocker, color: "text-blue-500", level: "Intermediate" },
@@ -104,7 +105,8 @@ const Index = () => {
           <div className="relative inline-block">
             <div className="w-48 h-48 mx-auto rounded-full bg-gradient-secondary p-1 animate-glow-pulse">
               <div className="w-full h-full rounded-full bg-muted flex items-center justify-center text-6xl font-bold text-primary">
-                A
+                {/* Replaced 'A' with image */}
+                <img src={tata} alt="Profile" className="w-full h-full object-cover rounded-full" />
               </div>
             </div>
           </div>
@@ -128,7 +130,7 @@ const Index = () => {
             <a href="#" className="text-3xl text-primary hover:text-accent transition-colors hover:scale-110 transform duration-300">
               <FaLinkedin />
             </a>
-            <a href="#" className="text-3xl text-primary hover:text-accent transition-colors hover:scale-110 transform duration-300">
+            <a href="https://www.reddit.com/user/Delicious_Cost_1981/" className="text-3xl text-primary hover:text-accent transition-colors hover:scale-110 transform duration-300">
               <FaReddit />
             </a>
           </div>
